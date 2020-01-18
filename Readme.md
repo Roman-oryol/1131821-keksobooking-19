@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Роман Орел](https://up.htmlacademy.ru/javascript/19/user/1131821).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Рожков](https://up.htmlacademy.ru/javascript/19/user/1069033).
 
 ---
 
