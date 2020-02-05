@@ -184,7 +184,3 @@ mapPinMainElement.addEventListener('keydown', function (evt) {
 adFormElement.addEventListener('change', function () {
   createMessageForInvalidGuests();
 });
-
-adFormElement.addEventListener('submit', function (evt) {
-
-});
