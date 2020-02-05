@@ -123,6 +123,12 @@ var changeStateFormElement = function (element, flag) {
   element.disabled = flag;
 };
 
+var changeStateFormCollection = function (collection, flag) {
+  for (var i = 0; i < collection.length; i++) {
+    changeStateFormElement(collection[i], flag);
+  }
+};
+
 var getMapPinMainCoordinates = function (radius, height) {
   var coordinateX = parseInt(mapPinMainElement.style.left, 10);
   var coordinateY = parseInt(mapPinMainElement.style.top, 10);
@@ -131,13 +137,9 @@ var getMapPinMainCoordinates = function (radius, height) {
 };
 
 var gettingInitialState = function (flag) {
-  for (var i = 0; i < adFormFieldsetElements.length; i++) {
-    changeStateFormElement(adFormFieldsetElements[i], flag);
-  }
+  changeStateFormCollection(adFormFieldsetElements, flag);
 
-  for (var j = 0; j < adFilterFieldElements.length; j++) {
-    changeStateFormElement(adFilterFieldElements[j], flag);
-  }
+  changeStateFormCollection(adFilterFieldElements, flag);
 
   changeStateFormElement(mapFilterFeaturesElement, flag);
 };
