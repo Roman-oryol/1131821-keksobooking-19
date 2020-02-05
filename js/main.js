@@ -124,9 +124,9 @@ var changeStateFormElement = function (element, flag) {
 };
 
 var changeStateFormCollection = function (collection, flag) {
-  for (var i = 0; i < collection.length; i++) {
-    changeStateFormElement(collection[i], flag);
-  }
+  collection.forEach(function (item) {
+    changeStateFormElement(item, flag);
+  });
 };
 
 var getMapPinMainCoordinates = function (radius, height) {
@@ -183,4 +183,8 @@ mapPinMainElement.addEventListener('keydown', function (evt) {
 
 adFormElement.addEventListener('change', function () {
   createMessageForInvalidGuests();
+});
+
+adFormElement.addEventListener('submit', function (evt) {
+
 });
