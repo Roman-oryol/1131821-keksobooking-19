@@ -5,7 +5,6 @@
   var MAP_PIN_HEIGHT = 84;
 
   var mapElement = document.querySelector('.map');
-  var similarListOfferElement = mapElement.querySelector('.map__pins');
   var mapPinMainElement = mapElement.querySelector('.map__pin--main');
   var adFormElement = document.querySelector('.ad-form');
   var adFormFieldsetElements = adFormElement.querySelectorAll('fieldset');
@@ -43,7 +42,7 @@
     adFormElement.classList.remove('ad-form--disabled');
     gettingInitialState(false);
     addressFieldElement.value = getMapPinMainCoordinates(MAP_PIN_RADIUS, MAP_PIN_HEIGHT);
-    similarListOfferElement.appendChild(window.pin.getListOfferElement(window.data.createArrayOffers(8)));
+    window.backend.load(window.pin.onLoad);
   };
 
   gettingInitialState(true);
